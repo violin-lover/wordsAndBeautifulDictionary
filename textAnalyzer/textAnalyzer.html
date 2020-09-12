@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Analyzer! :D</title>
+<style>
+
+h1 {
+color: Gray;
+font-family: cursive;
+text-align: center;
+}
+
+.disBtn {
+background-color: Pink;
+color: Black;
+font-family: cursive;
+}
+
+h3{
+color: Gray;
+font-family: cursive;
+text-align: center;
+}
+
+table {
+border-width: 2px;
+}
+
+th {
+background-color: Pink;
+font-size: 14px;
+text-align: center;
+border-style: solid;
+border-color: Black;
+font-family: cursive;
+color: Gray;
+}
+
+td {
+background-color: White;
+width: 30px;
+font-size: 14px;
+text-align: center;
+margin-top: 12px;
+border-style: solid;
+border-color: Black;
+font-family: cursive;
+color: Gray;
+}
+</style>
+</head>
+<body style="background-color:MistyRose;">
+
+<h1>Text Analyzer! :D</h1>
+<h3>Input your text:</h3>
+<br>
+<center><textarea id = "textToTest" rows = "13" cols = "80" class = textarea></textarea></center>
+<br>
+<br>
+<button id = "processWords" class = "disBtn" onclick = "analyzeText(textToTest.value)">Process Word Frequency</button>  
+  <button id = "processLetters" class = "disBtn" onclick = "letterAnalization(textToTest.value)">Process Letter Frequency</button>
+<br>
+<br>
+<div id = wordFrequencyAnswer></div>
+<br>
+<br>
+<div id = letterFrequencyAnswer></div>
+  ----------------------------------------------------------------------------------------------------------------------
+<p>
+<center><h3>Anagrams</h3></center>
+
+According to Wikipedia, an <b><em>ANAGRAM</em></b> is "a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once."
+<br>
+<br>
+
+<center><input id = anagram1></input>
+<input id = anagram2></input></center>
+<br>
+<center><button id = "isAna" class = "disBtn" onclick = "isAnagram(anagram1.value,anagram2.value)">Is Anagram?</button></center>
+</p>
+</body>
+
+<script src = "textAnalyzer.js"></script>
+
+</html>
