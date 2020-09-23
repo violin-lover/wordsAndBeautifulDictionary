@@ -16,8 +16,23 @@ dAU.innerHTML = tblHTML;
 }
 
 function createRowDef(k){
-let row = `<em>${k.partofspeech}</em><br><li>${k.term}: ${k.definition}<br>Example: ${k.example}</li><br>`
-return row;
+debugger;
+let exam = "";
+if(typeof k.example == "object"){
+exam = "Example: Sorry, there is no example :("
+} else {
+exam = `Example: ${k.example}`
+}
+
+let pOS = "";
+if(typeof k.partofspeech == "object"){
+pOS = "Part of Speech: N/A"
+} else {
+pOS = `${k.partofspeech}`
+}
+
+return `<em>${pOS}</em><br><li>${k.term}: ${k.definition}<br>${exam}</li><br>`
+
 }
 
 function fetchDef(word,dAU){
@@ -35,3 +50,4 @@ console.log(err)
 });*/
 
 }
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Find your song lyrics</title>
+
+<script src = "lyricsAPI.js"></script>
+
+<style>
+body {
+background-color: LightBlue;
+}
+
+.buttonStyle {
+color: Black;
+font-family: cursive;
+border-size: 2px;
+}
+
+</style>
+</head>
+<body>
+
+<center><h1>Your Own Lyrics Finder!</h1></center>
+
+<center>Input your song here: <input type = "text" id = "songToFind"></input></center>
+<br><br>
+<center><button type  = "button" class = "buttonStyle" onclick = "define()">Find the lyrics for this song!</button></center>
+<br>
+<br>
+<div id = "lyricOutput"></div>
+</body>
+</html>
